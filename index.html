@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BIN ICH REICH?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+        <nav></nav>
+        <main></main>
+        <div id="layer1" class="layer">
+            <img src="assets/pig_bank_pink.png" alt="Pig Bank" />
+            <div id="optionLayer" class="option-layer">
+                <img
+                src="assets/option_layer.png"
+                alt="Option Layer"
+                class="option-layer-image"
+                />
+        <section class="slider-container">
+          <label for="incomeSlider">Wie hoch ist Ihr Einkommen?</label>
+          <input type="range" id="incomeSlider" min="0" max="7000" value="0" />
+          <output for="incomeSlider" id="incomeOutput">0</output>
+        </section>
+        <section>
+            <div class="age-control younger">
+                <button>-</button><span><input type="text"></span><span><button>+</button></span>
+            </div>
+            <div class="age-control older">
+                <button>-</button><span><input type="text"></span><span><button>+</button></span>
+            </div>
+        </section>
+        <section>
+            <button id="calculate">BERECHNEN</button>
+        </section>
+       
+      </div>
+    </div>
+    <section id="layer2" class="layer hidden">
+      <img src="assets/pig_bank_pink.png" alt="Background" />
+      <div class="pay-scale-container">
+        <img src="assets/pay_scale_layer.png" alt="Pay Scale" class="pay-scale" />
+       
+        <div id="indicator" class="indicator" style="bottom: 50%">
+         
+          <img src="assets/pay_scale_indector.png" alt="Indicator" />
+        </div>
+      </div>
+      <div class="income-result">
+        <p>Ich gehöre zur deutschen Mittelschicht</p>
+        
+        <span id="incomeLevel">0</span>
+      </div>
+    </section>
+    </main>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
