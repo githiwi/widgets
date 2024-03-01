@@ -4,25 +4,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const layer2 = document.getElementById('layer2');
     const incomeSlider = document.getElementById('incomeSlider');
     const incomeOutput = document.getElementById('incomeOutput');
-    const indicator = document.getElementById('indicator');
-    const incomeLevel = document.getElementById('incomeLevel');
-
-    calculateBtn.addEventListener('click', () => {
-        layer1.style.display = 'none';
-        layer2.classList.remove('hidden');
-        const chosenIncome = incomeSlider.value;
-        incomeLevel.textContent = chosenIncome;
-
-        
-        const indicatorPosition = (parseInt(chosenIncome) / 7000) * 100;
-        indicator.style.bottom = `${indicatorPosition}%`;
-    });
+    const indicator = document.querySelector('.indicator');
 
     incomeSlider.addEventListener('input', () => {
+        console.log("slider value", incomeSlider.value)
         incomeOutput.value = incomeSlider.value;
     });
 
-    // 
+    calculateBtn.addEventListener('click', () => {
+        layer1.style.display = 'none';
+        layer2.style.display = 'block';
+        const chosenIncome = parseInt(incomeSlider.value);
+        console.log("chosenIncome", chosenIncome);
+
+        if (chosenIncome === 0) {
+            indicator.style.top = `991px`;
+        } else {
+            // Define the top positions for each value
+            const positions = {
+                2000: 881,
+                3000: 763,
+                4000: 654,
+                5000: 545,
+                6000: 435,
+                7000: 325
+            };
+
+            // Interpolate the indicator's bottom position based on chosenIncome
+            let indicatorTop = interpolateIndicatorPosition(chosenIncome, positions);
+            indicator.style.top = `${indicatorTop}px`;
+        }
+    });
+
     const ageControls = document.querySelectorAll('.age-control');
 
     ageControls.forEach(function (ageControl) {
@@ -46,7 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
         input.value = currentValue;
     }
 
-    
+    function interpolateIndicatorPosition(income, positions) {
+        // Find the closest lower and upper bounds for the chosen income
+        let lowerBound = 2000;
+        let upperBound = 7000;
+
+        for (let value in positions) {
+            if (income >= value) {
+                lowerBound = parseInt(value);
+            } else {
+                upperBound = parseInt(value);
+                break;
+            }
+        }
+
+        // Interpolate the position
+        const lowerBoundTop = positions[lowerBound];
+        const upperBoundTop = positions[upperBound];
+
+        const range = upperBound - lowerBound;
+        const progress = (income - lowerBound) / range;
+
+        return lowerBoundTop + progress * (upperBoundTop - lowerBoundTop);
+    }
+
 });
-
-

@@ -1,19 +1,15 @@
 * {
   box-sizing: border-box;
-
 }
 
 body,
 html {
- 
   height: 100%;
-  
 }
 
 body {
     padding: 0;
     margin: 0;
-  
   }
 
   #root {
@@ -27,8 +23,7 @@ body {
         flex: 1;
         display: flex;
     }
-    > section{
-        
+    > section{ 
         flex: 1;
     }
   }
@@ -42,7 +37,7 @@ body {
 }
 
 #optionLayer {
-  background-image: url("option_layer.png");
+  background-image: url("assets/option_layer.png");
   background-size: 972px 605px; 
   background-repeat: no-repeat;
 }
@@ -107,10 +102,6 @@ body {
   z-index: 10;
 }
 
-.pay-scale,
-.indicator {
-  position: absolute;
-}
 
 .option-layer-image {
   position: absolute;
@@ -184,14 +175,7 @@ input[type="range"] {
 }
 
 .age-controls {
-  /* position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10%; */
+  
 }
 
 .age-control.younger {
@@ -282,17 +266,6 @@ input[type="range"] {
 }
 
 
-#layer2 .pay-scale-container {
-  position: relative;
-  width: 576px;
-  height: 625px;
-  top: 350px; 
-  left: 248px; 
-  background-image: url("pay_scale_layer.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 @font-face {
   font-family: "GothamBold";
   src: url("assets/fonts/Gotham-Bold.otf") format("opentype");
@@ -324,18 +297,117 @@ input[type="range"] {
      left: 690px;
 }
 }
-#layer2 .indicator {
+
+
+#layer2 {
+  position: relative;
+  width: 1080px;
+  height: 1080px;
+  margin: auto;
+}
+
+
+
+.layer2 {
+  position: relative;
+  width: 1080px;
+  height: 1080px;
+  margin: auto;
+}
+
+.layer2-title {
   position: absolute;
-  width: 882px; 
-  height: 384px; 
-  left: 50%;
-  transform: translateX(-50%);
+
+  top: 14px;
+  left: 248px;
+}
+
+#binIchReichLayer2 {
+  position: absolute;
+  top: 39px;
+  left: 272px;
+
+  font-family: "GothamCondensed", sans-serif;
+  font-size: 115px;
+  color: white; 
+}
+
+#mittelSchichtText {
+  position: absolute;
+  top: 224px;
+  left: 106px;
+  font-family: "GothamBold", sans-serif;
+  font-size: 30pt;
+  color: black; 
   
 }
 
-#layer2 .income-result {
+.pay-scale {
   position: absolute;
-  top: 15px; 
-  right: 0;
-  text-align: center;
+  left: 248px;
+  top: 350px;
+
+  width: 576px;
+  height: 625px;
+}
+.indicator {
+  position: absolute;
+
+  left: 99px; 
+  bottom: 0; 
+}
+
+.piggy-bank-scales {
+  position: absolute;
+  width: 879px;
+  height: 431px;
+  top: 349px;
+  left: 101px;
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("assets/fonts/Gotham-Book.otf") format("opentype");
+}
+
+#value2000,
+#value3000,
+#value4000,
+#value5000,
+#value6000,
+#value7000 {
+  font-family: "GothamBook", sans-serif;
+  font-size: 30pt;
+  color: black;
+  position: absolute;
+}
+
+#value2000 {
+  left: 470px;
+  top: 881px;
+}
+
+#value3000 {
+  left: 479px;
+  top: 763px;
+}
+
+#value4000 {
+  left: 477px;
+  top: 654px;
+}
+
+#value5000 {
+  left: 479px;
+  top: 545px;
+}
+
+#value6000 {
+  left: 478px;
+  top: 435px;
+}
+
+#value7000 {
+  left: 482px;
+  top: 325px;
 }

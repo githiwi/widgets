@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8" />
@@ -35,6 +35,7 @@
             <button class="minus">-</button>
             <span><input type="text" value="0" /> </span>
             <span><button class="add">+</button> </span>
+            <!-- label for text -->
           </div>
           <div class="age-control older">
             <button class="minus">-</button>
@@ -53,20 +54,38 @@
 
     <section>
       <div id="layer2" class="layer hidden">
-        <img src="assets/background_pink.png" alt="Background" />
-        <div class="pay-scale-container">
-          <img src="assets/pay_scale_layer.png" alt="Pay Scale" class="pay-scale" />
-          
-          <div id="indicator" class="indicator" style="bottom: 50%">
-            
-            <img src="assets/pay_scale_indector.png" alt="Indicator" />
-          </div>
-        </div>
-        <div class="income-result">
-          <p>Ich gehöre zur deutschen Mittelschicht</p>
-         
-          <span id="incomeLevel">0</span>
-        </div>
+        <img src="assets/IncomeCalculatorCover_BG02.png" alt="Background" />
+        <img
+          src="assets/hidden_title.png"
+          alt="Hidden Title"
+          class="layer2-title"
+        />
+        <div id="binIchReichLayer2">BIN ICH REICH?</div>
+        <p id="mittelSchichtText">Ich gehöre zur deutschen Mittelschicht</p>
+        <img
+          src="assets/Piggy-bank-scales-Graph-Graph.png"
+          alt="Pay Scale"
+          class="pay-scale"
+        />
+        <img
+          src="assets/Piggy-bank-scales-Graph-LinesBG.png"
+          alt="Piggy Bank Scales"
+          class="piggy-bank-scales"
+        />
+        <img
+          src="assets/Piggy-bank-scales-Graph-Line.png"
+          alt="Indicator"
+          class="indicator"
+        />
+  
+       
+        <span id="value2000">2.000</span>
+        <span id="value3000">3.000</span>
+        <span id="value4000">4.000</span>
+        <span id="value5000">5.000</span>
+        <span id="value6000">6.000</span>
+        <span id="value7000">7.000</span>
+        
       </div>
     </section>
   </main>
