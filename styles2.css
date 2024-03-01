@@ -306,22 +306,22 @@ input[type="range"] {
   width: 509px; 
   height: 58px; 
   font-family: "GothamBold", sans-serif;
-  font-size: 60pt; 
-  color: white; 
-  background-color: transparent; 
-  border: none; 
-  text-align: center; 
-  padding: 0; 
+  font-weight: bold;
+  font-size: 50pt;
+  color: white;
+  background: transparent;
+  border: none;
+  text-shadow: 2px 3px 50px rgba(128, 128, 128, 0.5);
+  text-align: center;
   display: flex; 
   justify-content: center; 
-  align-items: center; 
-
+  align-items: center;
+  
 }
 @media screen and (min-width: 1090px) {
   #calculate {
      top: 889px;
-     left: 490px;
-
+     left: 690px;
 }
 }
 #layer2 .indicator {
