@@ -37,20 +37,68 @@ body, h1 {
 }
 
 input[type="range"] {
-  width: 100%;
+    width: 802px; 
+    position: relative;
+    top: -34px; 
 }
 
-#calculate {
+@font-face {
+    font-family: "GothamCondensed";
+    src: url("assets/fonts/GothamCond-XBlack.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+#binIchReich {
     position: absolute;
-    top: 889px;
-    left: 258px;
-    width: 509px;
-    height: 58px;
+    top: 51px; 
+    left: 272px; 
+    font-family: "GothamCondensed", sans-serif;
+    font-size: 70px;
+    color: white;
+    line-height: 1;
+  }
+
+  @font-face {
+    font-family: "GothamCondensedUltra";
+    src: url("assets/fonts/GothamCond-Ultra.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  #findenSieHerausText {
+    position: absolute;
+    top: 198px; 
+    left: 137px; 
+    width: 807px; 
+    height: 40px; 
+    font-family: "GothamCondensedUltra", sans-serif;
+    font-size: 40.55pt;
+    color: white;
+    line-height: 40px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+  #householdQuestion {
+    position: absolute;
+    top: 424px; 
+    left: 124px; 
+    width: 834px; 
+    height: 27px; 
     font-family: "Gotham", sans-serif;
     font-weight: bold;
-    font-size: 40pt;
-    color: white
-}
+    font-size: 37pt;
+    color: red; 
+    line-height: 86.13pt; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 10;
+  }
+  
 
 .hidden {
   display: none;
@@ -69,17 +117,54 @@ input[type="range"] {
     height: auto;
 }
 
-.slider-container {
+
+
+.slider-container > output {
     position: absolute;
+  width: 114px; 
+  height: 31px;
+  left: 656px; 
+  top: 44px; 
+  font-family: "Gotham", sans-serif;
+  font-weight: bold; 
+  font-size: 41px; 
+  color: white; 
+  line-height: 31px;
+  text-align: center; 
+  background: transparent; 
+  border: none; 
+    /* position: absolute;
     top: 15px; 
     left: 44px; 
     width: 972px; 
 
     h1{
         font-size: medium;
-    }
+    } */
 }
 
+.slider-container > label {
+    position: absolute;
+    width: 556px; 
+    height: 30px; 
+    left: 24px; 
+    top: 45px; 
+    font-family: "Gotham", sans-serif;
+    font-size: 36px;
+    color: white; 
+    line-height: 30px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .slider-container > label,
+.slider-container > output {
+  /* position: absolute; */
+  width: 100%;
+  text-align: center;
+}
 .age-controls {
   /* position: absolute;
   bottom: 20px;
@@ -161,6 +246,21 @@ input[type="range"] {
 /* .age-control span {
   
 } */
+
+#calculate {
+    position: absolute;
+    top: 889px;
+    left: 258px;
+    width: 509px;
+    height: 58px;
+    font-family: "Gotham", sans-serif;
+    font-weight: bold;
+    font-size: 50pt;
+    color: white;
+    background: transparent;
+    border: none;
+    text-shadow: 2px 3px 50px rgba(128, 128, 128, 0.5);
+}
 
 
 #layer2 .pay-scale-container {
