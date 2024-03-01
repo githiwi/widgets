@@ -94,22 +94,46 @@ input[type="range"] {
 
 .age-control.younger {
   position: absolute;
-  top: 546px; 
-  left: 62px; 
+  top: 545px; 
+  left: 45px; 
+  .minus{
+    background-color: #b28181;
+    color: #FFFFFF;
+    font-size: 40px;
+  }
+  .add{
+    background-color: #FFFFFF;
+    color: #bc0000;
+    font-size: 40px;
+  }
+ 
 }
 
 
 .age-control.older {
   position: absolute;
-  top: 547px; 
-  left: 829px; 
+  top: 545px; 
+  left: 798px; 
+
+  .minus{
+    background-color: #b28181;
+    color: #FFFFFF;
+    font-size: 40px;
+  }
+
+    .add {
+        background-color: #FFFFFF;
+        color: #bc0000;
+        font-size: 40px;
+    }
+    
 }
 
-.age-control label {
+/* .age-control label {
   font-size: 14px;
   margin-top: 5px; 
   text-align: center;
-}
+} */
 
 .age-control {
     display: flex;
@@ -118,19 +142,25 @@ input[type="range"] {
 }
 
 
-.age-control button,
+/* .age-control button,
 .age-control span {
-    margin: 0 5px; 
-}
+    margin: 0 1px; 
+} */
 
 
 .age-control button {
+    width: 76px;
+    height: 76px;
 }
-  
+.age-control input {
+    width: 75px;
+    height: 70px;
+    text-align: center;
+}
 
-.age-control span {
+/* .age-control span {
   
-}
+} */
 
 
 #layer2 .pay-scale-container {

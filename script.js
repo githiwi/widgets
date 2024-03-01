@@ -22,6 +22,30 @@ document.addEventListener('DOMContentLoaded', () => {
         incomeOutput.value = incomeSlider.value;
     });
 
+    // 
+    const ageControls = document.querySelectorAll('.age-control');
+
+    ageControls.forEach(function (ageControl) {
+        const minusButton = ageControl.querySelector('.minus');
+        const addButton = ageControl.querySelector('.add');
+        const ageInput = ageControl.querySelector('input');
+
+        minusButton.addEventListener('click', function () {
+            updateAgeInput(ageInput, -1);
+        });
+
+        addButton.addEventListener('click', function () {
+            updateAgeInput(ageInput, 1);
+        });
+    });
+
+    function updateAgeInput(input, increment) {
+        let currentValue = parseInt(input.value) || 0;
+        currentValue += increment;
+        currentValue = Math.max(0, Math.min(100, currentValue));
+        input.value = currentValue;
+    }
+
     
 });
 
