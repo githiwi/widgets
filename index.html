@@ -1,104 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>BIN ICH REICH?</title>
-  <link rel="stylesheet" href="styles2.css" />
-</head>
-
-<body>
-  <main>
-    <section>
-      <div id="layer1" class="layer">
-        <img src="assets/Layer 0.png" alt="Pig Bank" />
-        <div id="optionLayer" class="option-layer">
-          
-          <div id="binIchReich">BIN ICH REICH?</div>
-
-          <div id="findenSieHerausText">
-            Finden Sie heraus wie reich oder arm Sie sind
-          </div>
-
-          <div class="slider-container">
-            <input type="range" id="incomeSlider" min="0" max="7000" value="0" />
-            <label for="incomeSlider">Wie hoch ist Ihr Einkommen?</label>
-            <output for="incomeSlider" id="incomeOutput">0</output>
-          </div>
-
-          <div id="householdQuestion">
-            Wie viele Personen leben in Ihrem Haushalt?
-          </div>
-
-          <div class="age-control younger">
-            <button class="minus">-</button>
-            <span><input type="text" disabled  value="0" /> </span>
-            <button class="add">+</button>
-            <label class="age-label">jünger als 14 Jahre</label>
-          </div>
-
-          <div class="age-control older">
-            <button class="minus">-</button>
-            <span><input type="text" disabled value="0" /> </span>
-            <button class="add">+</button> 
-            <label class="age-label">älter als 14 Jahre</label>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <button id="calculate">BERECHNEN</button>
-      </div>
-    </section>
-
-    <section>
-      <div id="layer2" class="layer hidden">
-        <div class="scene active">
-          <div id="binIchReichLayer2">BIN ICH REICH?</div>
-          <div class="layer2-title-container">
-            <div class="layer2-title">Ich gehöre zur deutschen Mittelschicht</div>
-          </div>
-          <img
-            src="assets/Piggy-bank-scales-Graph-Graph.png"
-            alt="Pay Scale"
-            class="pay-scale"
-          />
-  
-          <div class="line-container left">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <div class="line-container right">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <img
-            src="assets/Piggy-bank-scales-Graph-Line.png"
-            alt="Indicator"
-            class="indicator"
-          />
-  
-          <div>
-            <span id="value2000">2.000</span>
-            <span id="value3000">3.000</span>
-            <span id="value4000">4.000</span>
-            <span id="value5000">5.000</span>
-            <span id="value6000">6.000</span>
-            <span id="value7000">7.000</span>
-          </div>
-        </div>
-      
-    </section>
-  </main>
-  <script src="script.js"></script>
-</body>
-
+   <head>
+      <meta charset="UTF-8" />
+      <title>BIN ICH REICH?</title>
+      <link rel="stylesheet" href="styles2.css" />
+   </head>
+   <body>
+      <main>
+         <section>
+            <div id="layer1" class="layer">
+               <img src="assets/Layer 0.png" alt="Pig Bank" />
+               <div id="optionLayer" class="option-layer">
+                  <div id="binIchReich">BIN ICH REICH?</div>
+                  <div id="findenSieHerausText">
+                     Finden Sie heraus wie reich oder arm Sie sind
+                  </div>
+                  <div class="slider-container">
+                     <input type="range" id="incomeSlider" min="0" max="7000" value="0" />
+                     <label for="incomeSlider">Wie hoch ist Ihr Einkommen?</label>
+                     <output for="incomeSlider" id="incomeOutput">0</output>
+                  </div>
+                  <div id="householdQuestion">
+                     Wie viele Personen leben in Ihrem Haushalt?
+                  </div>
+                  <div class="age-control younger">
+                     <button class="minus">-</button>
+                     <span><input type="text" disabled  value="0" /> </span>
+                     <button class="add">+</button>
+                     <label class="age-label">jünger als 14 Jahre</label>
+                  </div>
+                  <div class="age-control older">
+                     <button class="minus">-</button>
+                     <span><input type="text" disabled value="0" /> </span>
+                     <button class="add">+</button> 
+                     <label class="age-label">älter als 14 Jahre</label>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section>
+            <div>
+               <button id="calculate">BERECHNEN</button>
+            </div>
+         </section>
+         <section>
+            <div id="layer2" class="layer hidden">
+            <div class="scene active">
+               <div id="binIchReichLayer2">BIN ICH REICH?</div>
+               <div class="layer2-title-container">
+                  <div class="layer2-title">Ich gehöre zur deutschen Mittelschicht</div>
+               </div>
+               <img
+                  src="assets/Piggy-bank-scales-Graph-Graph.png"
+                  alt="Pay Scale"
+                  class="pay-scale"
+                  />
+               <div class="line-container left">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+               </div>
+               <div class="line-container right">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+               </div>
+               <img
+                  src="assets/Piggy-bank-scales-Graph-Line.png"
+                  alt="Indicator"
+                  class="indicator"
+                  />
+               <div>
+                  <span id="value2000">2.000</span>
+                  <span id="value3000">3.000</span>
+                  <span id="value4000">4.000</span>
+                  <span id="value5000">5.000</span>
+                  <span id="value6000">6.000</span>
+                  <span id="value7000">7.000</span>
+               </div>
+            </div>
+         </section>
+      </main>
+      <script src="script.js"></script>
+   </body>
 </html>
