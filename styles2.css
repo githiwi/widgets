@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "GothamCondensed";
+  src: url("assets/fonts/GothamCond-XBlack.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamCondensedUltra";
+  src: url("assets/fonts/GothamCond-Ultra.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url("assets/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("assets/fonts/Gotham-Book.otf") format("opentype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -36,38 +60,27 @@ body {
   margin: auto;
 }
 
-#optionLayer {
-  background-image: url("assets/option_layer.png");
-  background-size: 972px 605px; 
-  background-repeat: no-repeat;
-}
-
 .hidden {
   display: none;
 }
 
-@font-face {
-  font-family: "GothamCondensed";
-  src: url("assets/fonts/GothamCond-XBlack.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 #binIchReich {
   position: absolute;
-  top: 51px;
-  left: 272px;
+  /* top: 51px;
+  left: 272px; */
   font-family: "GothamCondensed", sans-serif;
-  font-size: 70px;
+  font-size: 115.66px;
   color: white;
   line-height: 1;
-}
 
-@font-face {
-  font-family: "GothamCondensedUltra";
-  src: url("assets/fonts/GothamCond-Ultra.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+  width: 586.5px;
+  height: 148.37px;
+  top: 15.31px;
+  left: 247.5px;
+  background-color: #bc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #findenSieHerausText {
@@ -77,7 +90,7 @@ body {
   width: 807px; 
   height: 40px; 
   font-family: "GothamCondensedUltra", sans-serif;
-  font-size: 40.55pt;
+  font-size: 54.55px;
   color: white;
   line-height: 40px; 
   white-space: nowrap; 
@@ -89,19 +102,18 @@ body {
   position: absolute;
   top: 424px; 
   left: 124px; 
-  width: 834px; 
-  height: 27px; 
+  /* width: 834px; 
+  height: 27px;  */
   font-family: "Gotham", sans-serif;
-  font-weight: bold; 
-  font-size: 37pt; 
-  color: red; 
-  line-height: 86.13pt;
+  /* font-weight: bold;  */
+  font-size: 38.83px;; 
+  color: #aa3f49; 
+  /* line-height: 86.13pt; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   z-index: 10;
 }
-
 
 .option-layer-image {
   position: absolute;
@@ -113,22 +125,61 @@ body {
 
 .slider-container {
   position: absolute;
-  top: 277px; 
-  left: 140px; 
+  top: 247px; 
+  left: 139px; 
   width: 802px; 
-  height: 91px; 
+  height: 93px; 
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid white;
+}
+
+.slider-container::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 29px;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 1px;
+  pointer-events: none;
 }
 
 input[type="range"] {
-  width: 802px; 
+  /* width: 802px; 
   position: relative;
-  top: -34px; 
+  top: -34px;  */
+  width: 800px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 29px;
+  background: transparent;
+  border-radius: 5px;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: url("assets/euro.png") no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
 
 .slider-container > label,
 .slider-container > output {
@@ -137,11 +188,6 @@ input[type="range"] {
   text-align: center;
 }
 
-@font-face {
-  font-family: "Gotham";
-  src: url("assets/fonts/Gotham-Black.otf") format("opentype");
-  
-}
 
 .slider-container > label {
   position: absolute;
@@ -153,9 +199,7 @@ input[type="range"] {
   font-size: 36px;
   color: white; 
   line-height: 30px; 
- 
   overflow: hidden;
-  
 }
 
 .slider-container > output {
@@ -174,118 +218,146 @@ input[type="range"] {
   border: none;
 }
 
-.age-controls {
-  
-}
-
 .age-control.younger {
-  position: absolute;
-  top: 545px;
+  /* position: absolute; */
+  top: 546px;
   left: 45px;
   .minus {
     background-color: #b28181;
     color: #ffffff;
     font-size: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .add {
     background-color: #ffffff;
     color: #bc0000;
     font-size: 40px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
+
 }
 
 .age-control.older {
-  position: absolute;
-  top: 545px;
+  /* position: absolute; */
+  top: 546px;
   left: 798px;
 
   .minus {
     background-color: #b28181;
     color: #ffffff;
     font-size: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   .add {
     background-color: #ffffff;
     color: #bc0000;
     font-size: 40px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 }
 
-.age-control.younger label {
-  position: absolute;
-  width: 172px; 
-  height: 67px; 
-  left: 67px; 
-  top: 638px; 
-  font-family: "Gotham", sans-serif;
-  font-weight: normal; 
-  font-size: 36pt; 
-  line-height: 40pt; 
-  color: red; 
-  text-align: center; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+.age-control .age-label {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #aa3f49;
+  font-family: "GothamBook", sans-serif;
+  font-size: 36px;
 }
-
-.age-control.older label {
-  position: absolute;
-  width: 145px; 
-  height: 67px; 
-  left: 835px; 
-  top: 638px; 
-  font-family: "Gotham", sans-serif;
-  font-weight: normal; 
-  font-size: 36pt; 
-  line-height: 40pt; 
-  color: red; 
-  text-align: center; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-}
-
 
 
 .age-control {
   display: flex;
+  position: absolute;
+  width: 218px;
+  height: 71px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  border-radius: 12px;
+  padding: 10px;
 }
 
+
+.age-control button,
+.age-control span {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.age-control button:active {
+  transform: scale(0.95);
+  background-color: #bbb;
+}
+
+.age-control input[type="text"] {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-radius: 1px;
+  width: 100%;
+}
 
 .age-control button {
-  width: 76px;
-  height: 76px;
+  width: 30%; 
+  background-color: #ccc;
+  border: none;
+  border-radius: 17.5px;
 }
-.age-control input {
-  width: 75px;
-  height: 76px;
+.age-control span {
+  width: 40%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.age-control label {
+  position: absolute;
+  width: 219px;
+  height: 88px;
+  bottom: -88px;
+  left: 0;
+  font-family: "Gotham", sans-serif;
+  font-size: 36pt;
+  color: red;
   text-align: center;
 }
 
-
-@font-face {
-  font-family: "GothamBold";
-  src: url("assets/fonts/Gotham-Bold.otf") format("opentype");
-  
+.age-control.younger input[type="text"],
+.age-control.older input[type="text"] {
+  font-family: "Gotham", sans-serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  width: 75px;
+  height: 50px;
+  background-color: #d7aaac;
 }
 
 #calculate {
   position: absolute;
   top: 889px; 
   left: 287px; 
-  width: 509px; 
-  height: 58px; 
+  /* width: 509px; 
+  height: 58px;  */
   font-family: "GothamBold", sans-serif;
   font-weight: bold;
-  font-size: 50pt;
+  font-size: 60pt;
   color: white;
   background: transparent;
   border: none;
   text-shadow: 2px 3px 50px rgba(128, 128, 128, 0.5);
+  transition: background-color 0.3s ease;
   text-align: center;
+  padding: 0;
   display: flex; 
   justify-content: center; 
   align-items: center;
@@ -298,6 +370,10 @@ input[type="range"] {
 }
 }
 
+#calculate:hover {
+  color: #bc0000;
+}
+
 
 #layer2 {
   position: relative;
@@ -307,12 +383,12 @@ input[type="range"] {
 }
 
 
-
-.layer2 {
-  position: relative;
-  width: 1080px;
-  height: 1080px;
-  margin: auto;
+#layer2 .indicator {
+  position: absolute;
+  width: 882px;
+  height: 384px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .layer2-title {
@@ -346,9 +422,6 @@ input[type="range"] {
   position: absolute;
   left: 248px;
   top: 350px;
-
-  width: 576px;
-  height: 625px;
 }
 .indicator {
   position: absolute;
@@ -363,11 +436,6 @@ input[type="range"] {
   height: 431px;
   top: 349px;
   left: 101px;
-}
-
-@font-face {
-  font-family: "GothamBook";
-  src: url("assets/fonts/Gotham-Book.otf") format("opentype");
 }
 
 #value2000,
