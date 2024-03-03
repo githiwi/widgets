@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateBtn.addEventListener('click', () => {
         layer1.style.display = 'none';
         layer2.style.display = 'block';
-        
+
         const chosenIncome = parseInt(incomeSlider.value);
         console.log("chosenIncome", chosenIncome);
 
         if (chosenIncome === 0) {
             indicator.style.top = `991px`;
         } else {
-            // Define the top positions for each value
+            //top positions for each value
             const positions = {
                 2000: 881,
                 3000: 763,
@@ -60,8 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         input.value = currentValue;
     }
 
+    /**
+     * Find the closest lower and upper bounds for the chosen income
+     * @param {number} income the value selected in the input range
+     * @param {object} positions the available scales with y(top) position
+     * @returns {number} top position for the indicator
+     */
     function interpolateIndicatorPosition(income, positions) {
-        // Find the closest lower and upper bounds for the chosen income
         let lowerBound = 2000;
         let upperBound = 7000;
 
