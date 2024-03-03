@@ -66,8 +66,6 @@ body {
 
 #binIchReich {
   position: absolute;
-  /* top: 51px;
-  left: 272px; */
   font-family: "GothamCondensed", sans-serif;
   font-size: 115.66px;
   color: white;
@@ -102,13 +100,9 @@ body {
   position: absolute;
   top: 424px; 
   left: 124px; 
-  /* width: 834px; 
-  height: 27px;  */
   font-family: "Gotham", sans-serif;
-  /* font-weight: bold;  */
   font-size: 38.83px;; 
   color: #aa3f49; 
-  /* line-height: 86.13pt; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -152,9 +146,6 @@ body {
 }
 
 input[type="range"] {
-  /* width: 802px; 
-  position: relative;
-  top: -34px;  */
   width: 800px;
   -webkit-appearance: none;
   appearance: none;
@@ -219,7 +210,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .age-control.younger {
-  /* position: absolute; */
   top: 546px;
   left: 45px;
   .minus {
@@ -240,7 +230,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .age-control.older {
-  /* position: absolute; */
   top: 546px;
   left: 798px;
 
@@ -346,8 +335,6 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   top: 889px; 
   left: 287px; 
-  /* width: 509px; 
-  height: 58px;  */
   font-family: "GothamBold", sans-serif;
   font-weight: bold;
   font-size: 60pt;
@@ -382,7 +369,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin: auto;
 }
 
-
 #layer2 .indicator {
   position: absolute;
   width: 882px;
@@ -391,37 +377,61 @@ input[type="range"]::-webkit-slider-thumb {
   transform: translateX(-50%);
 }
 
-.layer2-title {
+#layer2 .income-result {
   position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 
-  top: 14px;
-  left: 248px;
+.layer2-title {
+  font-family: "GothamBold", sans-serif;
+  font-size: 42px;
+  transform: translateY(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s ease-in-out;
+  width: 100%;
 }
 
 #binIchReichLayer2 {
   position: absolute;
-  top: 39px;
-  left: 272px;
-
+  width: 586.5px;
+  height: 148.37px;
+  top: 15.31px;
+  left: 247.5px;
+  background-color: #bc0000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "GothamCondensed", sans-serif;
   font-size: 115px;
-  color: white; 
 }
 
-#mittelSchichtText {
+
+.layer2-title-container {
   position: absolute;
-  top: 224px;
-  left: 106px;
-  font-family: "GothamBold", sans-serif;
-  font-size: 30pt;
-  color: black; 
-  
+  top: 220px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  height: 48px;
 }
+
+.active .layer2-title {
+  transform: translateY(0);
+}
+
 
 .pay-scale {
   position: absolute;
-  left: 248px;
+  width: 576px;
+  height: 625px;
   top: 350px;
+  left: 248px;
 }
 .indicator {
   position: absolute;
@@ -478,4 +488,72 @@ input[type="range"]::-webkit-slider-thumb {
 #value7000 {
   left: 482px;
   top: 325px;
+}
+/* ------------------- */
+.scene {
+  background-image: url("assets/background_pink.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1080px;
+  width: 1080px;
+  position: relative;
+  margin: auto;
+}
+
+.scales-container {
+  position: absolute;
+  bottom: 105px;
+  transition: height 1s ease-in-out;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+}
+.active .scales-container {
+  height: 625px;
+}
+
+.scales-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 870px;
+  object-fit: cover;
+}
+
+.line-container {
+  position: absolute;
+  top: 350px;
+  width: 364px;
+  overflow: hidden;
+}
+
+.line-container.left {
+  left: 100px;
+}
+
+.line-container.right {
+  right: 100px;
+}
+
+.line {
+  height: 2px;
+  background-color: #fff;
+  opacity: 0.3;
+  margin-bottom: 105px;
+  transition: all 1s ease-in-out;
+}
+
+.line-container.left .line {
+  transform: translateX(100%);
+}
+
+.line-container.right .line {
+  transform: translateX(-100%);
+}
+
+.active .line {
+  transform: translateX(0) !important;
 }

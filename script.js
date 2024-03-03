@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateBtn.addEventListener('click', () => {
         layer1.style.display = 'none';
         layer2.style.display = 'block';
+        
         const chosenIncome = parseInt(incomeSlider.value);
         console.log("chosenIncome", chosenIncome);
 
